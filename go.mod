@@ -1,6 +1,6 @@
-module github.com/re-cinq/schema
+module github.com/re-cinq/pathfinder-schema
 
-go 1.21.3
+go 1.21.6
 
 require (
 	github.com/google/uuid v1.3.1
