@@ -54,6 +54,26 @@ func (u DeclaredUnit) String() string {
 	return string(u)
 }
 
+func (u DeclaredUnit) ShortString() string {
+	switch u {
+	case Liter:
+		return "L"
+	case KiloGram:
+		return "Kg"
+	case CubicMeter:
+		return "m^3"
+	case KiloWattHour:
+		return "KWh"
+	case MegaJoule:
+		return "MJ"
+	case TonKilometer:
+		return "tkm"
+	case SquareMeter:
+		return "sq m"
+	}
+	return u.String()
+}
+
 func (u *DeclaredUnit) UnmarshalJSON(data []byte) error {
 	var value string
 	if err := json.Unmarshal(data, &value); err != nil {
